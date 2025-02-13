@@ -441,6 +441,12 @@ func initCommands(
 				},
 			}, nil
 		},
+
+		"oci push module": func() (cli.Command, error) {
+			return &command.OciPushModuleCommand{
+				Meta: meta,
+			}, nil
+		},
 	}
 
 	if meta.AllowExperimentalFeatures {
